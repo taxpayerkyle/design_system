@@ -39,8 +39,8 @@ const SEMANTIC = [
 const TYPE = [
   ["text-display-lg", "Refund ready", "Test Tiempos · 38 / 400"],
   ["text-heading-lg", "Review your W-2", "Beausite · 26 / 500"],
-  ["text-body-md-strong", "Federal refund", "Beausite · 14 / 500"],
-  ["text-body-md", "We pulled these figures from your uploaded form.", "Beausite · 14 / 400"],
+  ["text-body-md-strong", "Federal refund", "Beausite · 16 / 500"],
+  ["text-body-md", "We pulled these figures from your uploaded form.", "Beausite · 16 / 400"],
   ["text-body-sm", "Estimated, not final", "Beausite · 13 / 400"],
   ["text-body-xs", "Encrypted and stored securely", "Beausite · 11 / 400"],
 ];
