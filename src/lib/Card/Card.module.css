@@ -1,0 +1,39 @@
+/* Card — compact / standard / large. Flat by default; elevated for one hero per screen. */
+
+.card {
+  background: var(--color-light-0);
+  border: var(--border-hairline) solid var(--color-border-card);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.compact  { padding: var(--space-md); border-radius: var(--radius-lg); }  /* <100px  */
+.standard { padding: var(--space-lg); border-radius: var(--radius-2xl); } /* 100–300 */
+.large    { padding: var(--space-xl); border-radius: var(--radius-2xl); } /* 300px+  */
+
+.elevated { box-shadow: var(--elevation-2); }
+
+/* Removes inset padding so full-bleed LineItem rows can own their own padding. */
+.flush { padding: 0; }
+
+/* -------------------------------------------------------------- LineItem */
+.lineItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 49px;
+  padding: 0 var(--space-lg);
+}
+
+.lineLabel { color: var(--color-dark-80); }
+.lineLabelTotal { color: var(--color-dark-100); }
+
+.lineValue { color: var(--color-dark-100); }
+.lineValueGreen { color: var(--color-green); }
+.lineValueRed { color: var(--color-red); }
+
+.divider {
+  height: 0;
+  border-top: var(--border-hairline) solid var(--color-border-card);
+  margin: 0 var(--space-lg);
+}

@@ -1,0 +1,35 @@
+/* Banner / Alert — compact card with a semantic tint + leading icon. */
+
+.banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  border: var(--border-hairline) solid var(--color-border-card);
+  background: var(--color-light-0);
+}
+
+.neutral { background: var(--color-light-20); }
+.success { background: var(--color-green-fade); }
+.error   { background: var(--color-error-bg); }
+.warning { background: rgba(184, 134, 11, 0.08); }
+
+.icon { flex-shrink: 0; margin-top: 1px; }
+
+.content { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.title { color: var(--color-dark-100); }
+.body { color: var(--color-dark-80); }
+
+.dismiss {
+  flex-shrink: 0;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}

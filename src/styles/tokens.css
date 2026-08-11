@@ -1,0 +1,133 @@
+/**
+ * Accountable Design System — Design Tokens
+ * Source of truth: Figma "Tax-filing experience" → Foundations, mirrored from the
+ * Accountable design spec. Every component consumes these variables — never hardcode.
+ *
+ * Naming mirrors the Figma variables (color/light/0 → --color-light-0, etc.)
+ */
+
+:root {
+  /* ---------------------------------------------------------------------- */
+  /* Typeface                                                               */
+  /* ---------------------------------------------------------------------- */
+  --font-sans: "Beausite Classic Trial", -apple-system, "SF Pro Text", system-ui,
+    "Segoe UI", Roboto, sans-serif;
+  /* Display serif — hero/marketing moments only */
+  --font-display: "Test Tiempos Text", Georgia, "Times New Roman", serif;
+
+  /* ---------------------------------------------------------------------- */
+  /* Color — Core Neutrals (Light scale)                                    */
+  /* ---------------------------------------------------------------------- */
+  --color-light-0: #ffffff;   /* Primary background (ALL screens), card bg */
+  --color-light-10: rgba(248, 248, 248, 0.9); /* Translucent card surface  */
+  --color-light-20: #f2f2f2;  /* Secondary button bg, disabled bg          */
+  --color-light-30: #e8e8e8;  /* Divider alt, hover tint on light surfaces */
+  --color-light-40: #dedede;  /* Border alt, heavier dividers              */
+  --color-light-50: #f9faf7;  /* Off-white surface (slight warm tint)      */
+
+  /* ---------------------------------------------------------------------- */
+  /* Color — Core Neutrals (Dark scale)                                     */
+  /* ---------------------------------------------------------------------- */
+  --color-dark-10: #b5b5b5;   /* Disabled text, muted icons                */
+  --color-dark-20: #ababab;
+  --color-dark-30: #a0a0a0;   /* Caption text, hints                       */
+  --color-dark-40: #969696;   /* Placeholder text                          */
+  --color-dark-50: #8c8c8c;   /* Subdued text                              */
+  --color-dark-60: #818181;
+  --color-dark-70: #777777;   /* Tertiary text, placeholders, icon default */
+  --color-dark-80: #666666;   /* Secondary text, trust badges              */
+  --color-dark-90: #1b1b1b;   /* Near-black text, link color               */
+  --color-dark-100: #000000;  /* Primary text, headings, primary button bg */
+
+  /* ---------------------------------------------------------------------- */
+  /* Color — Semantic                                                       */
+  /* ---------------------------------------------------------------------- */
+  --color-green: #297b33;                    /* Positive money, success     */
+  --color-green-fade: rgba(80, 234, 98, 0.12); /* Success background tint    */
+  --color-brand: #fe4f40;                    /* THE red — CTAs, brand        */
+  --color-accent: #fe4f40;                   /* Alias of brand (destructive) */
+  --color-red: #fe4f40;                      /* Alias of brand (neg money)   */
+  --color-error: #fe4f40;                    /* Alias of brand (validation)  */
+  --color-error-bg: rgba(254, 79, 64, 0.06); /* Error background tint        */
+  --color-amber: #b8860b;                    /* Warning, attention           */
+  --color-orange: #ff5c21;                   /* Highlight, emphasis          */
+  --color-yellow: #edff53;                   /* Checkbox checked, highlights  */
+  /* --color-blue is intentionally omitted — blue is reserved, do not use.  */
+
+  /* ---------------------------------------------------------------------- */
+  /* Color — Borders & Overlays                                             */
+  /* ---------------------------------------------------------------------- */
+  --color-border-card: rgba(13, 13, 13, 0.1); /* ALL borders & dividers     */
+  --color-border-form: rgba(0, 0, 0, 0.16);   /* Form input borders         */
+  --color-text-light: rgba(255, 255, 255, 0.8); /* Light text on dark       */
+  --color-overlay-modal: rgba(0, 0, 0, 0.9);  /* Modal backdrop             */
+  --color-scrim: rgba(0, 0, 0, 0.25);         /* Bottom-sheet scrim          */
+
+  /* ---------------------------------------------------------------------- */
+  /* Spacing — base unit 4px                                                */
+  /* ---------------------------------------------------------------------- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;   /* Screen edge padding */
+  --space-lg: 20px;   /* Standard card padding */
+  --space-xl: 24px;   /* Large card padding, header→content */
+  --space-2xl: 32px;  /* THE signature rhythm — between major blocks */
+  --space-3xl: 40px;  /* Modal top margin, large breaks */
+
+  /* ---------------------------------------------------------------------- */
+  /* Border radius                                                          */
+  /* ---------------------------------------------------------------------- */
+  --radius-sm: 4px;   /* Inputs, checkbox corners */
+  --radius-pill: 6px; /* Status pills */
+  --radius-md: 8px;   /* Small buttons, toggles */
+  --radius-lg: 12px;  /* Compact cards, banners */
+  --radius-xl: 16px;  /* Standard cards, sheet top corners */
+  --radius-2xl: 20px; /* Large cards, signature cards */
+  --radius-full: 9999px; /* Pills, avatars, ALL buttons */
+
+  /* ---------------------------------------------------------------------- */
+  /* Elevation / Shadows                                                    */
+  /* ---------------------------------------------------------------------- */
+  --elevation-0: none;
+  --elevation-1: 0 2px 6px 0 rgba(0, 0, 0, 0.04); /* Micro lift            */
+  --elevation-2: 0 4px 12px 0 rgba(0, 0, 0, 0.08); /* Hero card (max 1/scr) */
+  --elevation-3: 0 8px 24px 0 rgba(0, 0, 0, 0.12); /* Modals, sheets        */
+
+  /* Button glass bevels (toggled via Shadow axis) */
+  --shadow-button-dark: 0 4px 10px 0 rgba(0, 0, 0, 0.2),
+    0 0 0 0 rgba(0, 0, 0, 0.9),
+    inset 0 -2px 0 0 rgba(255, 255, 255, 0.35),
+    inset 0 2px 0 0 rgba(255, 255, 255, 0.35);
+  --shadow-button-light: 0 4px 10px 0 rgba(0, 0, 0, 0.16),
+    0 0 0 0 rgba(0, 0, 0, 0.9),
+    inset 0 -2px 0 0 rgba(255, 255, 255, 0.35),
+    inset 0 2px 0 0 rgba(255, 255, 255, 0.35);
+
+  /* ---------------------------------------------------------------------- */
+  /* Borders                                                                */
+  /* ---------------------------------------------------------------------- */
+  --border-hairline: 0.6px; /* Everywhere — card outlines, dividers */
+
+  /* ---------------------------------------------------------------------- */
+  /* Motion                                                                 */
+  /* ---------------------------------------------------------------------- */
+  --motion-micro: 100ms;
+  --motion-fast: 200ms;
+  --motion-normal: 300ms;
+  --motion-slow: 500ms;
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-enter: cubic-bezier(0, 0, 0.2, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---------------------------------------------------------------------- */
+  /* Layout constants                                                       */
+  /* ---------------------------------------------------------------------- */
+  --layout-screen-width: 390px;
+  --layout-content-width: 358px;
+  --layout-screen-padding: 16px;
+  --layout-app-header: 100px;
+  --layout-ios-header: 43px;
+  --layout-footer-compact: 54px;
+  --layout-footer-expanded: 104px;
+}

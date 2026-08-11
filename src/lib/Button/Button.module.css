@@ -1,0 +1,102 @@
+/* Button — Type × Size × State × Shadow. Pill-shaped, glass bevel optional. */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  font-family: var(--font-sans);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: transform var(--motion-micro) var(--ease-default),
+    background-color var(--motion-fast) var(--ease-default),
+    box-shadow var(--motion-fast) var(--ease-default);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-dark-100);
+  outline-offset: 2px;
+}
+
+.button:active:not(.disabled) {
+  transform: scale(0.98);
+}
+
+/* ------------------------------------------------------------------ Sizes */
+/* All sizes hug content by default; lg/md stretch when .fluid is applied.  */
+.lg { height: 50px; padding: 0 40px; font-size: 14px; font-weight: 400; line-height: 1.4; }
+.md { height: 41px; padding: 0 20px; font-size: 13px; font-weight: 400; line-height: 1.5; }
+.sm { height: 32px; padding: 0 12px; font-size: 11px; font-weight: 400; line-height: 1.4; }
+.xs { height: 24px; padding: 0 8px;  font-size: 11px; font-weight: 400; line-height: 1.4; }
+
+.fluid { width: 100%; }
+
+/* --------------------------------------------------------------- Variants */
+.primary {
+  background: var(--color-dark-100);
+  color: var(--color-light-0);
+  border-color: var(--color-dark-100);
+}
+.primary:hover:not(.disabled) {
+  background: #1a1a1a; /* lighten ~8% */
+}
+
+.secondary {
+  background: var(--color-light-20);
+  color: var(--color-dark-100);
+  border-color: var(--color-light-20);
+}
+.secondary:hover:not(.disabled) {
+  background: var(--color-light-30);
+}
+
+.negative {
+  background: var(--color-accent);
+  color: var(--color-light-0);
+  border-color: var(--color-accent);
+}
+.negative:hover:not(.disabled) {
+  background: #ff6455; /* lighten ~8% */
+}
+
+/* xs primary uses a subtle vertical gradient instead of flat, no glass */
+.primary.xs {
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+/* ----------------------------------------------------------------- Glass */
+.shadowDark { box-shadow: var(--shadow-button-dark); }
+.shadowLight { box-shadow: var(--shadow-button-light); }
+/* xs never carries glass */
+.xs.shadowDark,
+.xs.shadowLight { box-shadow: none; }
+
+/* -------------------------------------------------------------- Disabled */
+.disabled,
+.disabled:hover {
+  background: var(--color-light-20);
+  color: var(--color-dark-10);
+  border-color: var(--color-light-20);
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------- Loading */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: spin 0.7s linear infinite;
+}
+.sm .spinner,
+.xs .spinner { width: 16px; height: 16px; }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

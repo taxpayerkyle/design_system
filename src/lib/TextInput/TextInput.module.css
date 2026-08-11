@@ -1,0 +1,76 @@
+/* TextInput — label above, 50px field (matches button.lg), state-driven border. */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.label {
+  color: var(--color-dark-100);
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+  padding: 0 var(--space-md);
+  border: 1px solid var(--color-border-form);
+  border-radius: var(--radius-md);
+  background: var(--color-light-0);
+  color: var(--color-dark-100);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  outline: none;
+  transition: border-color var(--motion-fast) var(--ease-default),
+    border-width var(--motion-fast) var(--ease-default);
+}
+
+.input::placeholder {
+  color: var(--color-dark-70);
+}
+
+/* Leading / trailing icon padding */
+.hasLeading .input { padding-left: 44px; }
+.hasTrailing .input { padding-right: 44px; }
+
+.leading,
+.trailing {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.leading { left: var(--space-md); }
+.trailing { right: var(--space-md); }
+
+/* States */
+.input:focus {
+  border-color: var(--color-dark-100);
+  border-width: 2px;
+  padding: 0 15px; /* compensate 2px border to avoid content shift */
+}
+.hasLeading .input:focus { padding-left: 43px; }
+.hasTrailing .input:focus { padding-right: 43px; }
+
+.error .input,
+.error .input:focus {
+  border-color: var(--color-error);
+}
+
+.disabled .input {
+  background: var(--color-light-20);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.helper { color: var(--color-dark-70); }
+.errorText { color: var(--color-error); }

@@ -1,0 +1,86 @@
+/* Checkbox, Radio, and segmented Toggle. */
+
+/* ------------------------------------------------------------- Checkbox */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  cursor: pointer;
+}
+.checkbox.disabled { cursor: not-allowed; opacity: 0.4; }
+
+.box {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border-card);
+  background: var(--color-light-0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background var(--motion-micro) var(--ease-default);
+}
+.box.checked {
+  border-color: transparent;
+  background: var(--color-yellow); /* checked state uses yellow */
+}
+
+.controlLabel { color: var(--color-dark-80); padding-top: 1px; }
+
+/* --------------------------------------------------------------- Radio */
+.radio {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  cursor: pointer;
+}
+.radio.disabled { cursor: not-allowed; opacity: 0.4; }
+
+.dot {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border-form);
+  background: var(--color-light-0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dot.selected { border-color: var(--color-dark-100); }
+.dot.selected::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-dark-100);
+}
+
+/* ------------------------------------------------------------- Toggle */
+.toggle {
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  background: var(--color-light-20);
+  border-radius: var(--radius-md);
+}
+.segment {
+  border: none;
+  background: transparent;
+  color: var(--color-dark-70);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background var(--motion-fast) var(--ease-default),
+    color var(--motion-fast) var(--ease-default);
+}
+.segment.active {
+  background: var(--color-light-0);
+  color: var(--color-dark-100);
+  box-shadow: var(--elevation-1);
+}

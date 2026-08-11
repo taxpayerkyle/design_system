@@ -1,0 +1,26 @@
+/* Pill — small status capsule. */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.neutral { background: var(--color-light-20); color: var(--color-dark-80); }
+.success {
+  background: var(--color-green-fade);
+  color: var(--color-green);
+  backdrop-filter: blur(17px);
+}
+.error   { background: var(--color-error-bg); color: var(--color-error); }
+.warning { background: rgba(184, 134, 11, 0.1); color: var(--color-amber); }
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: currentColor;
+}

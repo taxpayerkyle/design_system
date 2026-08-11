@@ -1,0 +1,52 @@
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px var(--space-xl) 120px;
+}
+
+.masthead { margin-bottom: 64px; }
+.eyebrow { color: var(--color-dark-70); margin-bottom: var(--space-sm); }
+.title { color: var(--color-dark-100); margin-bottom: var(--space-sm); }
+.tagline { color: var(--color-dark-100); margin-bottom: var(--space-md); }
+.lede { color: var(--color-dark-80); max-width: 560px; }
+
+.section { margin-bottom: 64px; }
+.sectionHead {
+  color: var(--color-dark-100);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  border-bottom: var(--border-hairline) solid var(--color-border-card);
+}
+
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md); }
+.stack { display: flex; flex-direction: column; gap: var(--space-md); max-width: 400px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: var(--space-md); }
+
+.subLabel { color: var(--color-dark-70); margin: var(--space-lg) 0 var(--space-sm); }
+
+/* Token swatches */
+.swatch { display: flex; flex-direction: column; gap: 6px; }
+.chip {
+  height: 56px;
+  border-radius: var(--radius-md);
+  border: var(--border-hairline) solid var(--color-border-card);
+}
+.chipName { color: var(--color-dark-100); }
+.chipVal { color: var(--color-dark-70); }
+
+.typeRow { padding: var(--space-sm) 0; border-bottom: var(--border-hairline) solid var(--color-border-card); }
+.typeMeta { color: var(--color-dark-70); }
+
+/* Phone frame for the composed demo */
+.phone {
+  width: 390px;
+  border: var(--border-hairline) solid var(--color-border-card);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: var(--elevation-2);
+  display: flex;
+  flex-direction: column;
+  min-height: 720px;
+  background: var(--color-light-0);
+}
+.phoneBody { flex: 1; padding: var(--space-md); display: flex; flex-direction: column; gap: var(--space-2xl); }

@@ -1,0 +1,62 @@
+/* Navigation chrome — iOS status bar, app header, section label, locked footer. */
+
+/* ----------------------------------------------------------- IOSHeader */
+.iosHeader {
+  height: var(--layout-ios-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-xl);
+  color: var(--color-dark-100);
+}
+.iosTime { font-weight: 500; }
+.iosGlyphs { display: flex; align-items: center; gap: 6px; }
+
+/* ----------------------------------------------------------- AppHeader */
+.appHeader {
+  height: var(--layout-app-header);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 var(--space-md);
+}
+.appHeaderTitle { color: var(--color-dark-100); }
+
+.navIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.navIcon:hover { background: var(--color-light-10); }
+.navLeading { left: var(--space-md); }
+.navTrailing { right: var(--space-md); }
+
+/* -------------------------------------------------------- SectionLabel */
+.sectionLabel {
+  color: var(--color-dark-90);
+  margin-bottom: var(--space-sm);
+}
+
+/* -------------------------------------------------------- LockedFooter */
+.footer {
+  position: sticky;
+  bottom: 0;
+  background: var(--color-light-0);
+  border-top: var(--border-hairline) solid var(--color-border-card);
+  padding: var(--space-md);
+  padding-bottom: 34px; /* home-indicator safe area */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.disclaimer { color: var(--color-dark-70); text-align: center; }
